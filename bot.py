@@ -1,4 +1,4 @@
-#import telegram.client
+import telegram.client
 from telethon.sync import TelegramClient
 from telethon.tl.functions.messages import GetDialogsRequest
 from telethon.tl.types import InputPeerEmpty, InputPeerChannel, InputPeerUser, ChannelParticipantsSearch
@@ -183,7 +183,7 @@ def add_to_group(client,user,group):
 
     return res
 
-def add_bulk_users_to_group(client,users_filename,group,members_already='members_already.csv',mode=1,min_delay=34,max_delay=43,start=1,scrap=True,amount=100):
+def add_bulk_users_to_group(client,users_filename,group,members_already='members_already.csv',mode=1,min_delay=60,max_delay=180,start=1,scrap=True,amount=100):
     failed_users = []
     lines = open('failed_users.txt','r').readlines()
     for l in lines:
