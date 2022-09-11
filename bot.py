@@ -363,7 +363,7 @@ client = TelegramClient('session_name_19', api_id,api_hash)
 
 authorize_client(client)
 
-add_bulk_users_to_group(client,'free_cross_promotions15.csv','megaadvertisement',start=st,mode=2,scrap=True)
+add_bulk_users_to_group(client,'free_cross_promotions19.csv','megaadvertisement',start=st,mode=2,scrap=True)
 
 
 st = int(open('last_index.txt','r').read())
